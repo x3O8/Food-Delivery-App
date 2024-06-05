@@ -1,0 +1,174 @@
+#Right_Anchor{
+	-fx-background-color: White;
+}
+#Left_Anchor{
+	-fx-background-color: #fff6e5;
+}
+
+#V_Right{
+	-fx-background-color: #fff6e5;
+}
+.text-field {
+	-fx-background-color: #FAFAFA;
+    -fx-pref-width: 180px;
+    -fx-padding: 7px;
+    -fx-border-color: Grey;
+    -fx-border-width: 0.5px;
+    -fx-text-fill: Black;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+    -fx-font-family:"Arial";
+    -fx-font-size:12px;     /* Font size */
+}
+
+.text-field:focused {
+    -fx-border-color: #4CAF50;     /* Green border when focused */
+}
+
+#Create_acc{
+	-fx-background-color: Black;
+	-fx-border-radius: 12;
+	-fx-background-radius:12;
+	-fx-padding:5;
+	-fx-font-size:17px;
+	-fx-text-fill: #ffffff;
+	
+}
+
+#Create_acc:hover{
+	-fx-background-color: #3FC060;
+    -fx-text-fill: #1b1c2c;
+    -fx-border-radius:17;
+    -fx-background-radius: 12;
+}
+
+#Log_in{
+	-fx-background-color: Transparent;
+	
+}
+
+
+#Log_in:hover {
+    -fx-text-fill: #1b1c2c;
+}
+
+#Sign_Text{
+	-fx-font-family:"Helvetica";
+}
+.Text{
+	-fx-font-size:14px;
+}
+
+/* Style the DatePicker */
+.date-picker {
+    -fx-background-color: #ffffff; /* Background color */
+    -fx-border-color: Transparent; /* Border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-padding: 7px; /* Padding */
+    -fx-font-family: "Arial"; /* Font family */
+    -fx-font-size: 14px; /* Font size */
+}
+
+/* Style the DatePicker text field */
+.date-picker .text-field {
+    -fx-background-color: #FAFAFA; /* Text field background color */
+    -fx-text-fill: #333333; /* Text color */
+    -fx-border-color: transparent; /* Remove border */
+    -fx-padding: 5px; /* Padding */
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+    -fx-border-color:#909090;
+}
+
+/* Style the DatePicker arrow button */
+.date-picker .arrow-button {
+    -fx-background-color: Transparent; /* Arrow button background color */
+    -fx-padding: 5px; /* Padding */
+    -fx-background-radius: 0; /* Remove radius */
+}
+
+/* Style the DatePicker arrow */
+.date-picker .arrow {
+    -fx-background-color: #333333; /* Arrow color */
+}
+
+/* Style the DatePicker popup */
+.date-picker-popup {
+    -fx-background-color: #ffffff; /* Popup background color */
+    -fx-border-color: #dcdcdc; /* Popup border color */
+    -fx-border-width: 1px; /* Popup border width */
+}
+
+/* Style the DatePicker cells (dates) */
+.date-picker .cell {
+    -fx-background-color: #ffffff; /* Cell background color */
+    -fx-text-fill: #333333; /* Cell text color */
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: #e6e6e6; /* Cell background color on hover */
+}
+
+.date-picker .cell:selected {
+    -fx-background-color: #4285f4; /* Selected cell background color */
+    -fx-text-fill: #ffffff; /* Selected cell text color */
+}
+
+/* Style the DatePicker today cell */
+.date-picker .cell:today {
+    -fx-background-color: #d4edda; /* Today cell background color */
+    -fx-text-fill: #155724; /* Today cell text color */
+}
+
+.check-box {
+    -fx-padding: 5 10 5 10;
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.check-box .box {
+    -fx-background-color: #E0E0E0;
+    -fx-border-color: #B0B0B0;
+    -fx-border-width: 0.5;
+    -fx-padding: 5;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-pref-width: 18;
+    -fx-pref-height: 18;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #4CAF50; /* Checked background color */
+    -fx-border-color: #4CAF50;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #757575; /* Hover border color */
+}
+
+.check-box .box .mark {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2 0 0 2;
+    -fx-padding: 5;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-pref-width: 6;
+    -fx-pref-height: 12;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+.check-box:selected .box .mark {
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.check-box .text {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 0 0 0 5; /* Adjust padding to separate text from box */
+}

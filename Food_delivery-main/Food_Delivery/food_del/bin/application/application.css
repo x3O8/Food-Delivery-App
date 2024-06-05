@@ -1,0 +1,87 @@
+
+.root {
+    -fx-background-color: #F5F5DC;
+}
+
+.hbox {
+    -fx-spacing: 20px;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 40px;
+}
+
+#Login_Title{
+	-fx-font-family:"DejaVu Serif";
+}
+
+.Log{
+	-fx-font-size:26px;
+	-fx-text-fill: #ffffff;
+}
+
+#sub_head{
+	-fx-text-fill:#909090;
+	-fx-font-family:"Arial";
+}
+
+.text-field,
+.password-field {
+    -fx-padding: 1px;
+    -fx-border-color:  #909090;
+    -fx-border-width: 0.5px;
+    -fx-background-color: #FAFAFA;
+    -fx-text-fill: #909090;
+    -fx-background-radius: 12;
+    -fx-font-family:"Arial";
+    -fx-font-size:14px;
+    -fx-border-radius:10;
+    -fx-background-radius: 10;
+    -fx-padding:10px;
+}
+.text-field:focused{
+	-fx-text-fill: Black;
+}
+
+.password-field:focused{
+	-fx-text-fill: Black;
+}
+
+
+#Login_button {
+    -fx-background-color: #1b1c2c;
+    -fx-text-fill: #D6E8EE;
+    -fx-font-size: 25px;
+    -fx-padding: 2px;
+    -fx-border-radius:17;
+    -fx-background-radius: 12;
+}
+
+#Not_Member{
+	-fx-background-color: Transparent;
+    -fx-text-fill: Black;
+    -fx-font-size: 18px;
+}
+
+#Full_name{
+	-fx-font-family:"Araboto Medium";
+}
+
+#Password{
+	-fx-font-family:"Araboto Medium";
+}
+
+#Login_button:hover {
+    -fx-background-color: #3FC060;
+    -fx-text-fill: #1b1c2c;
+    -fx-border-radius:17;
+    -fx-background-radius: 12;
+}
+
+
+/* styles.css */
+
+
+
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */

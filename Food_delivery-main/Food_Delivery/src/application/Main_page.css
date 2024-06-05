@@ -1,0 +1,98 @@
+#backdrop{
+	-fx-background-color: #ffffff;
+}
+
+#Top_nav{
+	-fx-background-color: #F5F5DC;
+}
+
+#Search_bar{
+	-fx-background-color: White;
+	-fx-border-color:  #909090;
+    -fx-border-width: 0.25px;
+    -fx-text-fill: #909090;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+    -fx-font-family:"Arial";
+}
+
+#Left_nav{
+	-fx-background-color: #F5F5DC;
+	-fx-background-radius:18;
+	-fx-border-radius: 18;
+	-fx-border-color:Transparent #909090 Transparent Transparent;
+	-fx-border-width:1px;
+}
+
+#Home_button{
+	-fx-background-color: Transparent;
+    -fx-padding: 1px;
+	
+}
+
+#View_cart{
+	-fx-background-color: Transparent;
+    -fx-padding: 1px;
+	
+}
+
+#Profile{
+	-fx-background-color: Transparent;
+    -fx-padding: 1px;
+	
+}
+
+#Scroll{
+	-fx-background-color:#ffffff;
+	-fx-border-color: Transparent;
+}
+
+#Menu_Grid{
+	-fx-background-color:#ffffff;
+}
+#Fir_row{
+	-fx-background-color:#ffffff;
+}
+
+#Sec_row{
+	-fx-background-color:#ffffff;
+}
+#thr_row{
+	-fx-background-color:#ffffff;
+}
+
+#Scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+#Scroll .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+#Scroll .scroll-bar:horizontal .thumb,
+#Scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #888;
+    -fx-background-radius: 10px;
+}
+
+#Scroll .scroll-bar:horizontal .thumb:hover,
+#Scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #555;
+}
+
+#add_cart {
+    -fx-background-color: #1b1c2c;
+    -fx-text-fill: #D6E8EE;
+    -fx-font-size: 14px;
+    -fx-padding: 2px;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+}
+
+#add_cart:hover {
+    -fx-background-color: #3FC060;
+    -fx-text-fill: #1b1c2c;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+}
+
