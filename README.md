@@ -1,4 +1,5 @@
-# OOPSDeliveryApp
+# Food Ordering and Delivery 
+## Work in progess 
 23AID111 Term Project 
 
 Food ordering and delivery system, pretty self explanatory. 
