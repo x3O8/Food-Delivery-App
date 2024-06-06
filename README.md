@@ -14,15 +14,17 @@ Signup page works! (all functionalities done)
 ### DEADLINE: 10/6/24 
 
 TODO:
-~~1. Setup login~~
+1. ~~Setup login page~~
 2. MainMenu buttons
-3. DeliveryPerson, Checkout and Profile GUI.
-4. Logout Option 
-5. Cart GUI
-6. Cart functionality 
-7. Admin page (maybe?)
-8. Login Page completion
-9. User profile controller
+3. Checkout and Profile UI
+4. Logout option
+5. Cart UI
+6. Cart functionality
+7. Admin page (maybe???)
+8. Login page completion
+9. User profile controller 
+
+
 
 
 
