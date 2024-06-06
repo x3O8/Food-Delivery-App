@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -17,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="780.0" stylesheets="@Signup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="780.0" stylesheets="@Signup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignupController">
    <children>
       <VBox id="Left_Panel" alignment="CENTER_LEFT" prefHeight="547.0" prefWidth="381.0">
          <children>
@@ -28,7 +29,7 @@
                <children>
                   <ImageView fitHeight="421.0" fitWidth="284.0" layoutX="68.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" x="-35.0" y="-120.0">
                      <image>
-                        <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-20%20131431.png" />
+                        <Image url="@../All_imgs/Screenshot%202024-05-20%20131431.png" />
                      </image>
                   </ImageView>
                </children>
@@ -37,7 +38,7 @@
       <VBox id="V_Right" prefHeight="547.0" prefWidth="4.0" />
       <AnchorPane id="Right_Anchor" prefHeight="547.0" prefWidth="490.0">
          <children>
-            <Button id="Create_acc" layoutX="129.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchtoScene1" prefHeight="36.0" prefWidth="169.0" text="Create Account">
+            <Button id="Create_acc" layoutX="129.0" layoutY="430.0" mnemonicParsing="false" onAction="#signupHandler" prefHeight="36.0" prefWidth="169.0" text="Create Account">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -46,27 +47,27 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Text>
-            <TextField layoutX="21.0" layoutY="111.0" prefHeight="26.0" prefWidth="184.0" />
+            <TextField fx:id="name_field" layoutX="21.0" layoutY="111.0" prefHeight="26.0" prefWidth="184.0" />
             <Text layoutX="27.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
                <font>
                   <Font size="13.0" />
                </font>
             </Text>
             <Text layoutX="24.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="62.8909912109375" />
-            <TextField layoutX="21.0" layoutY="171.0" prefHeight="26.0" prefWidth="184.0" />
-            <PasswordField layoutX="21.0" layoutY="233.0" prefHeight="26.0" prefWidth="184.0" />
-            <PasswordField layoutX="21.0" layoutY="299.0" prefHeight="26.0" prefWidth="184.0" />
+            <TextField fx:id="username_field" layoutX="21.0" layoutY="171.0" prefHeight="26.0" prefWidth="184.0" />
+            <PasswordField fx:id="password_field" layoutX="21.0" layoutY="233.0" prefHeight="26.0" prefWidth="184.0" />
+            <PasswordField fx:id="confirm_pass_field" layoutX="21.0" layoutY="299.0" prefHeight="26.0" prefWidth="184.0" />
             <Text layoutX="27.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
             <Text layoutX="26.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password" />
             <Text layoutX="239.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No." />
-            <TextField layoutX="233.0" layoutY="109.0" />
+            <TextField fx:id="phone_field" layoutX="233.0" layoutY="109.0" />
             <Text layoutX="239.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
-            <TextField layoutX="234.0" layoutY="169.0" prefHeight="31.0" prefWidth="150.0" />
+            <TextField fx:id="adress_field" layoutX="234.0" layoutY="169.0" prefHeight="31.0" prefWidth="150.0" />
             <Text layoutX="237.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth" />
-            <DatePicker layoutX="223.0" layoutY="224.0" prefHeight="46.0" prefWidth="202.0" />
+            <DatePicker fx:id="dob_field" layoutX="223.0" layoutY="224.0" prefHeight="46.0" prefWidth="202.0" />
             <Text layoutX="234.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-            <TextField layoutX="228.0" layoutY="300.0" />
-            <CheckBox layoutX="88.0" layoutY="374.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="254.0" text="I Agree to Terms and Conditions">
+            <TextField fx:id="email_field" layoutX="228.0" layoutY="300.0" />
+            <CheckBox fx:id="terms_box" layoutX="85.0" layoutY="366.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="254.0" text="I Agree to Terms and Conditions">
                <font>
                   <Font size="11.0" />
                </font>
@@ -82,6 +83,16 @@
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
             <Line endX="100.0" layoutX="212.0" layoutY="68.0" startX="-100.0" stroke="#8e7b00" />
+            <Label fx:id="err_label" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="405.0" prefHeight="18.0" prefWidth="412.0" text="asd" textFill="WHITE" />
+            <Label fx:id="name_err" layoutX="64.0" layoutY="83.0" prefHeight="18.0" prefWidth="111.0" text="*" textFill="WHITE" />
+            <Label fx:id="ph_err" layoutX="298.0" layoutY="83.0" prefHeight="18.0" prefWidth="104.0" text="*" textFill="WHITE" />
+            <Label fx:id="user_err" layoutX="80.0" layoutY="147.0" prefHeight="18.0" prefWidth="104.0" text="*" textFill="WHITE" />
+            <Label fx:id="address_err" layoutX="285.0" layoutY="147.0" prefHeight="18.0" prefWidth="104.0" text="*" textFill="WHITE" />
+            <Label fx:id="pass_err" layoutX="82.0" layoutY="209.0" prefHeight="18.0" prefWidth="104.0" text="*" textFill="WHITE" />
+            <Label fx:id="dob_err" layoutX="308.0" layoutY="207.0" prefHeight="18.0" prefWidth="104.0" text="*" textFill="WHITE" />
+            <Label fx:id="confirm_err" layoutX="124.0" layoutY="275.0" prefHeight="18.0" prefWidth="104.0" text="*" textFill="WHITE" />
+            <Label fx:id="mail_err" layoutX="265.0" layoutY="276.0" prefHeight="18.0" prefWidth="104.0" text="*" textFill="WHITE" />
+            <Label fx:id="mismatch_err" layoutX="26.0" layoutY="337.0" prefHeight="18.0" prefWidth="376.0" text="*" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

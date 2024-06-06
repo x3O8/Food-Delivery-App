@@ -19,13 +19,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="backdrop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="1092.0" stylesheets="@Main_page.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<BorderPane id="backdrop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="1092.0" stylesheets="@Main_page.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
    <top>
       <HBox id="Top_nav" alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="1092.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="56.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-22%20195315.png" />
+                  <Image url="@../All_imgs/Screenshot%202024-05-22%20195315.png" />
                </image>
                <HBox.margin>
                   <Insets left="20.0" />
@@ -47,7 +47,7 @@
                      </effect></TextField>
                   <ImageView fitHeight="47.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-25%20160157.png" />
+                        <Image url="@../All_imgs/Screenshot%202024-05-25%20160157.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="15.0" />
@@ -71,7 +71,7 @@
                   </Label>
                   <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-25%20161120.png" />
+                        <Image url="@../All_imgs/Screenshot%202024-05-25%20161120.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="20.0" top="17.0" />
@@ -107,7 +107,7 @@
                   </Button>
                   <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-25%20163147.png" />
+                        <Image url="@../All_imgs/Screenshot%202024-05-25%20163147.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" top="22.0" />
@@ -125,7 +125,7 @@
             </Line>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="175.0">
                <children>
-                  <Button id="View_cart" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="View Cart">
+                  <Button id="View_cart" fx:id="cart_button" mnemonicParsing="false" onAction="#initialize" prefHeight="34.0" prefWidth="110.0" text="View Cart">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="16.0" />
                      </font>
@@ -138,7 +138,7 @@
                   </Button>
                   <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-25%20164226.png" />
+                        <Image url="@../All_imgs/Screenshot%202024-05-25%20164226.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="15.0" top="26.0" />
@@ -156,7 +156,7 @@
             </Line>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="64.0" prefWidth="175.0">
                <children>
-                  <Button id="Profile" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" text="Profile">
+                  <Button id="Profile" fx:id="profile_button" mnemonicParsing="false" onAction="#initialize" prefHeight="30.0" prefWidth="122.0" text="Profile">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="16.0" />
                      </font>
@@ -169,7 +169,7 @@
                   </Button>
                   <ImageView fitHeight="24.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-25%20164911.png" />
+                        <Image url="@../All_imgs/Screenshot%202024-05-25%20164911.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" right="8.0" top="13.0" />
@@ -223,7 +223,7 @@
                   </Pane>
                   <ImageView fitHeight="239.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../OneDrive/Desktop/ALL_Images/Screenshot%202024-05-25%20151646.png" />
+                        <Image url="@../All_imgs/Screenshot%202024-05-25%20151646.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="45.0" top="10.0" />

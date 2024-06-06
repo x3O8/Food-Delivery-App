@@ -2,9 +2,6 @@ package application;
 
 import java.io.IOException;
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -30,7 +27,6 @@ public class SampleController{
 	    }
 	}
 
-	
 	public void switchtoScene2(ActionEvent e) throws IOException {
 		try {
 			root = (Parent)FXMLLoader.load(getClass().getResource("Signup.fxml"));
