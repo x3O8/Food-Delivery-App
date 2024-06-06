@@ -22,7 +22,11 @@ TODO:
 6. Cart functionality
 7. Admin page (maybe???)
 8. Login page completion
-9. User profile controller 
+9. User profile controller
+10. Change main menu text
+11. Main menu cleanup
+12. Remove "for only {cost}" under each item and replace it with just cost
+13. Search feature (optional - low prio)
 
 
 
