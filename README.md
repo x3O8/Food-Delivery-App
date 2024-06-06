@@ -32,6 +32,8 @@ TODO:
 12. Remove "for only {cost}" under each item and replace it with just cost
 13. Search feature (optional - low prio)
 14. ~~Profile UI~~
+15. Customer support UI
+    
 
 
 
