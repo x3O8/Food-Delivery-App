@@ -1,0 +1,53 @@
+#downunder{
+	-fx-background-color: #EAE3C9;
+}
+
+#blobs{
+	-fx-background-radius:30;
+	-fx-border-radius: 30;
+}
+
+#info{
+	-fx-border-color: Transparent Transparent #8f6304 Transparent;
+	-fx-background-color:Transparent;
+	
+}
+
+#save_changes{
+	-fx-background-color: Black;
+	-fx-border-radius: 12;
+	-fx-background-radius:12;
+	-fx-padding:2;
+	-fx-font-size:14px;
+	-fx-text-fill: #ffffff;
+	
+}
+
+#save_changes:hover{
+	-fx-background-color: #3FC060;
+    -fx-text-fill: #1b1c2c;
+    -fx-border-radius:17;
+    -fx-background-radius: 12;
+}
+
+#home_button{
+	-fx-background-color: Transparent;
+    -fx-padding: 1px;
+	-fx-padding:2;
+	-fx-font-size:12px;
+	
+}
+
+#pass_button{
+	-fx-background-color: Transparent;
+    -fx-padding: 1px;
+	-fx-padding:2;
+	-fx-font-size:12px;
+}
+
+#terms_button{
+	-fx-background-color: Transparent;
+    -fx-padding: 1px;
+	-fx-padding:2;
+	-fx-font-size:12px;
+}
