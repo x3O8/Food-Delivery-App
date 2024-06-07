@@ -22,7 +22,7 @@ TODO:
 2. MainMenu buttons
 3. Checkout 
 4. Logout option
-5. Cart UI
+5. ~~Cart UI~~
 6. Cart functionality
 7. Admin page (maybe???)
 8. Login page completion
