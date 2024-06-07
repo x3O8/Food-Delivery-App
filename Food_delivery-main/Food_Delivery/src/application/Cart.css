@@ -1,0 +1,10 @@
+#left_pane_top{
+	-fx-background-color: #7a9def;
+}
+
+#left_pane_bottom{
+	-fx-background-color: #b0cffd;
+}
+#right_pane{
+	-fx-background-color: #ffffff;
+}
