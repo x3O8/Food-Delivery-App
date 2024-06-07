@@ -21,7 +21,7 @@ TODO:
 1. ~~Setup login page~~
 2. MainMenu buttons
 3. Checkout 
-4. Logout option
+4. ~~Logout option~~
 5. ~~Cart UI~~
 6. Cart functionality
 7. Admin page (maybe???)
