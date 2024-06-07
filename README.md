@@ -11,7 +11,7 @@ Uses:
    
 Signup page works! (all functionalities done)
 Profile page is all done! 
-Login page is 90% done
+Login page is 100% done :)
 Cart only 5% done :(
 
 
@@ -25,7 +25,7 @@ TODO:
 5. ~~Cart UI~~
 6. Cart functionality
 7. Admin page (maybe???)
-8. Login page completion
+8. ~~Login page completion~~
 9. ~~User profile controller~~
 10. Change main menu text
 11. Main menu cleanup
