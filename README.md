@@ -33,6 +33,9 @@ TODO:
 13. Search feature (optional - low prio)
 14. ~~Profile UI~~
 15. Customer support UI
+16. Add back button for CART
+17. Remove home button in mainmenu
+    
     
 
 
