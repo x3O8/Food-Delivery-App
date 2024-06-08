@@ -38,7 +38,7 @@ public class DatabaseManager {
     public static void createUser(String name, String phone_no, String username, String address, String password, String dob, String email) {
         String sql = "INSERT INTO users (name, phone_no, username, address, password, dob, email) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+        try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, name);
@@ -52,9 +52,10 @@ public class DatabaseManager {
             pstmt.executeUpdate();
             System.out.println("User created successfully.");
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error creating user: " + e.getMessage());
         }
     }
+
     public static boolean userExists(String username) {
         String sql = "SELECT COUNT(*) FROM users WHERE username = ?";
         try (Connection conn = connect();
@@ -71,7 +72,7 @@ public class DatabaseManager {
     }
 
     public static boolean validateUser(String username, String password) {
-        String sql = "SELECT COUNT(*) FROM users WHERE username = ? AND password = ?";
+        String sql = "SELECT COUNT(*) FROM users WHERE username = ? AND BINARY password = ?";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, username);
@@ -91,18 +92,17 @@ public class DatabaseManager {
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
             pstmt.setString(1, newValue);
             pstmt.setString(2, username);
             pstmt.executeUpdate();
-
+            System.out.println("User field updated successfully.");
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error updating user field: " + e.getMessage());
         }
     }
+
     public static void main(String[] args) {
         boolean isConnected = testConnection();
         System.out.println("Connection test result: " + isConnected);
-        
     }
 }

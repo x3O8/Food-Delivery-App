@@ -1,0 +1,55 @@
+#left_pane_top{
+	-fx-background-color: #7a9def;
+}
+
+#left_pane_bottom{
+	-fx-background-color: #b0cffd;
+}
+#right_pane{
+	-fx-background-color: #ffffff;
+}
+
+#plc_ord{
+	-fx-background-color: #1b1c2c;
+    -fx-text-fill: #D6E8EE;
+    -fx-font-size: 15px;
+    -fx-padding: 2px;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+}
+
+#plc_ord:hover {
+    -fx-background-color: #3FC060;
+    -fx-text-fill: #1b1c2c;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+}
+
+#clr_crt{
+	-fx-background-color: #ffffff;
+	-fx-border-color:#000000;
+    -fx-text-fill: #000000;
+    -fx-font-size: 15px;
+    -fx-padding: 2px;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+}
+
+#clr_crt:hover {
+    -fx-background-color: #3FC060;
+    -fx-text-fill: #1b1c2c;
+    -fx-border-radius:12;
+    -fx-background-radius: 12;
+}
+
+#return_bck{
+	-fx-background-color:Transparent;
+}
+
+#flc_btt{
+	-fx-background-color: Transparent;
+	-fx-border-color:#ffffff;
+	-fx-border-width: 0.5px;
+	-fx-border-radius:8;
+	-fx-text-fill: #ffffff;
+}

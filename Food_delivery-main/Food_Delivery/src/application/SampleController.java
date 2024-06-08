@@ -43,7 +43,7 @@ public class SampleController{
 	
 	public void switchtoScene3(ActionEvent e) throws IOException {
 		try {
-			root = (Parent)FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+			root = (Parent)FXMLLoader.load(getClass().getResource("Main_Page.fxml"));
 			stage=(Stage)((Node)e.getSource()).getScene().getWindow();
 			stage.setX(200);
 	        stage.setY(5);

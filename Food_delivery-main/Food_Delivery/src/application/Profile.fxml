@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -19,7 +20,7 @@
          <children>
             <Pane prefHeight="71.0" prefWidth="609.0">
                <children>
-                  <ImageView fitHeight="307.0" fitWidth="624.0" layoutX="-24.0" layoutY="-137.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="307.0" fitWidth="624.0" layoutX="-24.0" layoutY="-90.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../All_imgs/green_banner.jpg" />
                      </image>
@@ -53,48 +54,51 @@
             </Label>
             <Label layoutX="185.0" layoutY="103.0" text="Name">
                <font>
-                  <Font name="Georgia" size="12.0" />
+                  <Font name="DejaVu Sans" size="12.0" />
                </font>
             </Label>
             <Label layoutX="186.0" layoutY="133.0" text="Email">
                <font>
-                  <Font name="Georgia" size="12.0" />
+                  <Font name="DejaVu Sans" size="12.0" />
                </font>
             </Label>
             <Label layoutX="187.0" layoutY="162.0" text="Password">
                <font>
-                  <Font name="Georgia" size="12.0" />
+                  <Font name="DejaVu Sans" size="12.0" />
                </font>
             </Label>
             <Label layoutX="190.0" layoutY="239.0" text="Address">
                <font>
-                  <Font name="Georgia" size="12.0" />
+                  <Font name="DejaVu Sans" size="12.0" />
                </font>
             </Label>
             <Label layoutX="191.0" layoutY="271.0" text="Phone">
                <font>
-                  <Font name="Georgia" size="12.0" />
+                  <Font name="DejaVu Sans" size="12.0" />
                </font>
             </Label>
             <Label layoutX="183.0" layoutY="70.0" text="Edit Profile Details">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="DejaVu Sans" size="14.0" />
                </font>
             </Label>
             <Label layoutX="185.0" layoutY="205.0" text="Edit Contact Info">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="DejaVu Sans" size="14.0" />
                </font>
             </Label>
-            <TextField id="info" fx:id="name_field" layoutX="322.0" layoutY="95.0" opacity="0.39" prefHeight="27.0" prefWidth="211.0" promptText="Enter name" />
-            <TextField id="info" fx:id="email_field" layoutX="323.0" layoutY="125.0" opacity="0.51" prefHeight="27.0" prefWidth="211.0" promptText="Email" />
-            <TextField id="info" fx:id="pass_field" layoutX="323.0" layoutY="154.0" opacity="0.5" prefHeight="27.0" prefWidth="211.0" promptText="DD/MM/YYYY" />
-            <TextField id="info" fx:id="address_field" layoutX="322.0" layoutY="231.0" opacity="0.5" prefHeight="27.0" prefWidth="211.0" promptText="Address" />
-            <TextField id="info" fx:id="phone_field" layoutX="322.0" layoutY="262.0" opacity="0.5" prefHeight="27.0" prefWidth="211.0" promptText="Phone No." />
-            <Button id="home_button" fx:id="home_button" layoutX="31.0" layoutY="109.0" mnemonicParsing="false" onAction="#initialize" prefHeight="22.0" prefWidth="104.0" text="Return Home">
+            <TextField id="info" fx:id="name_field" layoutX="322.0" layoutY="95.0" prefHeight="27.0" prefWidth="211.0" promptText="Enter name" />
+            <TextField id="info" fx:id="email_field" layoutX="323.0" layoutY="125.0" prefHeight="27.0" prefWidth="211.0" promptText="Email" />
+            <TextField id="info" fx:id="pass_field" layoutX="323.0" layoutY="154.0" prefHeight="27.0" prefWidth="211.0" promptText="DD/MM/YYYY" />
+            <TextField id="info" fx:id="address_field" layoutX="322.0" layoutY="231.0" prefHeight="27.0" prefWidth="211.0" promptText="Address" />
+            <TextField id="info" fx:id="phone_field" layoutX="322.0" layoutY="262.0" prefHeight="27.0" prefWidth="211.0" promptText="Phone No." />
+            <Button id="home_button" fx:id="home_button" layoutX="39.0" layoutY="109.0" mnemonicParsing="false" onAction="#initialize" prefHeight="22.0" prefWidth="104.0" text="Return Home">
                <font>
-                  <Font name="Arial" size="12.0" />
+                  <Font name="DejaVu Sans" size="12.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Label layoutX="17.0" layoutY="108.0" prefHeight="25.0" prefWidth="28.0" text="🏠">
                <font>
@@ -102,7 +106,13 @@
                </font>
             </Label>
             <Button id="save_changes" fx:id="save_button" layoutX="298.0" layoutY="312.0" mnemonicParsing="false" onAction="#initialize" prefHeight="20.0" prefWidth="121.0" text="Save Changes" />
-            <Button id="terms_button" layoutX="23.0" layoutY="149.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="121.0" text="Terms &amp; Cond." />
+            <Button id="terms_button" fx:id="contact_button" alignment="CENTER" layoutX="23.0" layoutY="149.0" mnemonicParsing="false" onAction="#initialize" prefHeight="22.0" prefWidth="121.0" text="Contact Us">
+               <font>
+                  <Font name="DejaVu Sans" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Label layoutX="16.0" layoutY="146.0" text="⚖">
                <font>
                   <Font size="18.0" />

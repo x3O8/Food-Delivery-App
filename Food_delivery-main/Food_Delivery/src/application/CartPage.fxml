@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="787.0" stylesheets="@CartPage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CartController">
+   <children>
+      <Pane prefHeight="539.0" prefWidth="494.0">
+         <children>
+            <Pane id="left_pane_bottom" layoutY="200.0" prefHeight="339.0" prefWidth="414.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane id="left_pane_top" prefHeight="200.0" prefWidth="414.0">
+               <children>
+                  <ImageView fitHeight="390.0" fitWidth="414.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../All_imgs/Screenshot%202024-06-07%20115229.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow radius="10.015" width="21.06" />
+         </effect>
+      </Pane>
+      <Pane id="right_pane" prefHeight="539.0" prefWidth="454.0">
+         <children>
+            <Label layoutX="28.0" layoutY="29.0" text="View Cart">
+               <font>
+                  <Font name="Georgia Bold" size="27.0" />
+               </font>
+            </Label>
+            <Line endX="53.800018310546875" endY="7.62939453125E-6" layoutX="129.0" layoutY="72.0" startX="-100.0" stroke="#8f6304" />
+            <Label layoutX="39.0" layoutY="82.0" text="Items">
+               <font>
+                  <Font name="Georgia" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="217.79995727539062" layoutX="129.0" layoutY="323.0" startX="-100.0" stroke="#8f6304" />
+            <Label layoutX="60.0" layoutY="345.0" text="GST">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="61.0" layoutY="379.0" text="Convience fee">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="63.0" layoutY="411.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="item1_label" layoutX="40.0" layoutY="133.0" prefHeight="20.0" prefWidth="150.0" text="Item 1" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item2_label" layoutX="40.0" layoutY="170.0" prefHeight="20.0" prefWidth="142.0" text="Item 2" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item3_label" layoutX="40.0" layoutY="208.0" prefHeight="20.0" prefWidth="155.0" text="Item 3" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item4_label" layoutX="40.0" layoutY="244.0" prefHeight="20.0" prefWidth="156.0" text="Item 4" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item5_label" layoutX="41.0" layoutY="277.0" prefHeight="20.0" prefWidth="157.0" text="Item 5" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item1_quantity" layoutX="267.0" layoutY="135.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item2_quantity" layoutX="268.0" layoutY="174.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item3_quantity" layoutX="268.0" layoutY="208.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item4_quantity" layoutX="269.0" layoutY="245.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="item5_quantity" layoutX="269.0" layoutY="278.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="269.0" layoutY="344.0" text="18%">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="272.0" layoutY="379.0" text="4%">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="total_price" layoutX="264.0" layoutY="412.0" text="\$0.00">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Button id="plc_ord" fx:id="place_order" layoutX="96.0" layoutY="459.0" mnemonicParsing="false" onAction="#initialize" prefHeight="30.0" prefWidth="101.0" text="Place Order">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button id="clr_crt" fx:id="clear_button" layoutX="212.0" layoutY="459.0" mnemonicParsing="false" onAction="#initialize" prefHeight="30.0" prefWidth="85.0" text="Clear Cart">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button id="flc_btt" fx:id="min1" layoutX="225.0" layoutY="131.0" mnemonicParsing="false" onAction="#initialize" prefWidth="22.0" text="-" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button id="flc_btt" fx:id="max1" layoutX="297.0" layoutY="129.0" mnemonicParsing="false" onAction="#initialize" text="+">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="flc_btt" fx:id="max2" layoutX="298.0" layoutY="170.0" mnemonicParsing="false" onAction="#initialize" text="+">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="flc_btt" fx:id="max3" layoutX="298.0" layoutY="206.0" mnemonicParsing="false" onAction="#initialize" text="+">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="flc_btt" fx:id="max5" layoutX="299.0" layoutY="274.0" mnemonicParsing="false" onAction="#initialize" text="+">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="flc_btt" fx:id="min2" layoutX="226.0" layoutY="172.0" mnemonicParsing="false" onAction="#initialize" prefWidth="22.0" text="-">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="flc_btt" fx:id="min3" layoutX="226.0" layoutY="208.0" mnemonicParsing="false" onAction="#initialize" prefWidth="22.0" text="-">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="flc_btt" fx:id="min4" layoutX="226.0" layoutY="242.0" mnemonicParsing="false" onAction="#initialize" prefWidth="22.0" text="-">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="flc_btt" fx:id="min5" layoutX="226.0" layoutY="275.0" mnemonicParsing="false" onAction="#initialize" prefWidth="22.0" text="-">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button id="return_bck" fx:id="home_button" layoutX="302.0" layoutY="2.0" mnemonicParsing="false" onAction="#initialize" prefHeight="39.0" prefWidth="70.0" text="🏠">
+               <font>
+                  <Font name="DejaVu Sans" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="flc_btt" fx:id="max4" layoutX="298.0" layoutY="241.0" mnemonicParsing="false" onAction="#initialize" text="+">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</HBox>

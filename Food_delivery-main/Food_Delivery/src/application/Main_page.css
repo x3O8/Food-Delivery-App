@@ -96,3 +96,10 @@
     -fx-background-radius: 12;
 }
 
+#logout{
+	-fx-background-color: Transparent;
+}
+
+#contact{
+	-fx-background-color: Transparent;
+}

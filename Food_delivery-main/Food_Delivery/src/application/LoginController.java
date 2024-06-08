@@ -1,7 +1,7 @@
 package application;
-import application.UserSession;
 
 import javafx.fxml.FXML;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -38,11 +38,21 @@ public class LoginController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
+        if (username.isEmpty()) {
+            showAlert("Login Failed", "Username cannot be blank.");
+            return;
+        }
+
+        if (password.isEmpty()) {
+            showAlert("Login Failed", "Password cannot be blank.");
+            return;
+        }
+
         if (DatabaseManager.userExists(username)) {
             if (DatabaseManager.validateUser(username, password)) {
                 UserSession.getInstance().setUsername(username); // Set username in UserSession
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("Main_Page.fxml"));
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     Scene scene = new Scene(root);
                     stage.setScene(scene);

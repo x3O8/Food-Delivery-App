@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox id="top_nav" prefHeight="53.0" prefWidth="600.0" stylesheets="@Customer_Support.css">
+         <children>
+            <Pane prefHeight="54.0" prefWidth="115.0">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="115.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../All_imgs/Screenshot%202024-05-22%20195315.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Separator>
+            <Pane prefHeight="54.0" prefWidth="652.0">
+               <children>
+                  <Button id="home_bt" fx:id="home_button" layoutX="607.0" layoutY="7.0" mnemonicParsing="false" text="🏠">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="cart_bt" fx:id="cart_button" layoutX="556.0" layoutY="1.0" mnemonicParsing="false" text="🛍">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="profile_bt" fx:id="profile_button" layoutX="516.0" layoutY="9.0" mnemonicParsing="false" text="👤">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow height="9.3" radius="3.5650000000000004" width="6.96" />
+         </effect>
+      </HBox>
+      <HBox prefHeight="478.0" prefWidth="786.0">
+         <children>
+            <Pane prefHeight="446.0" prefWidth="351.0">
+               <children>
+                  <ImageView fitHeight="358.0" fitWidth="269.0" layoutX="38.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../All_imgs/Screenshot%202024-06-08%20161958.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="458.0" prefWidth="435.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="21.0" text="Unnmatched">
+                     <font>
+                        <Font name="Georgia Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="51.0" text="Customer Support">
+                     <font>
+                        <Font name="Georgia Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="95.0" text="We believe in fast and friendly service!">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="112.0" text="If you encounter any issues, our dedicated support team is here to resolve">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="129.0" text="them swiftly and effortlessly.">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="146.0" text="Your satisfaction is our priority—delicious meals, zero hassles!">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="404.0" text="Contact Us At">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="426.0" text="Phone : +91 7012244590">
+                     <font>
+                        <Font name="System Italic" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="446.0" text="Email : umamihq@gmail.com">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="211.0" text="Put down your Queries and Suggestions ">
+                     <font>
+                        <Font name="Georgia Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="236.0" text="We will get back to you in less than 48 hours.">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="16.0" layoutY="271.0" prefHeight="115.0" prefWidth="391.0" promptText="Enter Your Queries here" />
+                  <Line endX="286.199951171875" layoutX="117.0" layoutY="191.0" startX="-100.0" stroke="#8f6304" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
