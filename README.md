@@ -30,7 +30,7 @@ TODO:
 10. ~~Change main menu text~~
 11. ~~Main menu cleanup~~
 12. ~~Remove "for only {cost}" under each item and replace it with just cost~~
-13. Search feature (optional - low prio)
+13. ~~Search feature (optional - low prio)~~
 14. ~~Profile UI~~
 15. ~~Customer support UI~~
 16. ~~Add back button for CART~~
