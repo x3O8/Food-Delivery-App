@@ -52,11 +52,11 @@
                </font>
             </Label>
             <Line endX="217.79995727539062" layoutX="129.0" layoutY="323.0" startX="-100.0" stroke="#8f6304" />
-            <Label layoutX="60.0" layoutY="345.0" text="GST">
+            <Label layoutX="60.0" layoutY="345.0" prefHeight="20.0" prefWidth="87.0" text="GST (18%)">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="61.0" layoutY="379.0" text="Convience fee">
+            <Label layoutX="61.0" layoutY="379.0" text="Convience fee(4%)">
                <font>
                   <Font size="14.0" />
                </font></Label>
@@ -105,11 +105,11 @@
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="269.0" layoutY="344.0" text="18%">
+            <Label fx:id="gst_label" layoutX="266.0" layoutY="344.0" text="18%">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="272.0" layoutY="379.0" text="4%">
+            <Label fx:id="tax_label" layoutX="266.0" layoutY="379.0" text="4%">
                <font>
                   <Font size="14.0" />
                </font></Label>

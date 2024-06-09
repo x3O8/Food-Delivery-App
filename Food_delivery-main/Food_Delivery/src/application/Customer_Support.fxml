@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SupportController">
    <children>
       <HBox id="top_nav" prefHeight="53.0" prefWidth="600.0" stylesheets="@Customer_Support.css">
          <children>
@@ -35,7 +35,7 @@
             </Separator>
             <Pane prefHeight="54.0" prefWidth="652.0">
                <children>
-                  <Button id="home_bt" fx:id="home_button" layoutX="607.0" layoutY="7.0" mnemonicParsing="false" text="🏠">
+                  <Button id="home_bt" fx:id="home_button" layoutX="607.0" layoutY="7.0" mnemonicParsing="false" onAction="#initialize" text="🏠">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -43,7 +43,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="cart_bt" fx:id="cart_button" layoutX="556.0" layoutY="1.0" mnemonicParsing="false" text="🛍">
+                  <Button id="cart_bt" fx:id="cart_button" layoutX="556.0" layoutY="1.0" mnemonicParsing="false" onAction="#initialize" text="🛍">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -51,7 +51,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="profile_bt" fx:id="profile_button" layoutX="516.0" layoutY="9.0" mnemonicParsing="false" text="👤">
+                  <Button id="profile_bt" fx:id="profile_button" layoutX="516.0" layoutY="9.0" mnemonicParsing="false" onAction="#initialize" text="👤">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -134,8 +134,9 @@
                         <Font name="Georgia" size="12.0" />
                      </font>
                   </Label>
-                  <TextArea layoutX="16.0" layoutY="271.0" prefHeight="115.0" prefWidth="391.0" promptText="Enter Your Queries here" />
+                  <TextArea fx:id="querie_text" layoutX="16.0" layoutY="271.0" prefHeight="115.0" prefWidth="391.0" promptText="Enter Your Queries here" />
                   <Line endX="286.199951171875" layoutX="117.0" layoutY="191.0" startX="-100.0" stroke="#8f6304" />
+                  <Button fx:id="submit_button" layoutX="353.0" layoutY="400.0" mnemonicParsing="false" onAction="#initialize" text="Submit" />
                </children>
             </Pane>
          </children>

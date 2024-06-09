@@ -168,6 +168,15 @@ public class SignupController {
             LocalDate dob = dob_field.getValue();
             String dobString = dob.toString();
 
+            if (dab.userExists(user_name)) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Username Exists");
+                alert.setHeaderText(null);
+                alert.setContentText("The username already exists. Please choose a different username.");
+                alert.showAndWait();
+                return;
+            }
+
             dab.createUser(name, phone, user_name, address, passw, dobString, email);
             switchtoScene1(event);
 
@@ -175,6 +184,7 @@ public class SignupController {
             System.out.print("Unexpected error" + e);
         }
     }
+
 
     private void resetErrorLabels() {
         name_err.setText("");

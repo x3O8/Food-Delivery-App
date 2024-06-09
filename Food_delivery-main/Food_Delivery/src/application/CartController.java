@@ -33,6 +33,10 @@ public class CartController {
     @FXML
     private Label item4_label;
     @FXML
+    private Label gst_label;
+    @FXML
+    private Label tax_label;
+    @FXML
     private Label item4_quantity;
     @FXML
     private Label item5_label;
@@ -76,7 +80,7 @@ public class CartController {
             Cart.getInstance().clearCart();
             loadCartItems();
         });
-        place_order.setOnAction(event -> showAlert("Order Placed", "Your order has been placed successfully."));
+        place_order.setOnAction(this::placeOrder);
 
         max1.setOnAction(event -> updateQuantity(item1_label.getText(), 1));
         min1.setOnAction(event -> updateQuantity(item1_label.getText(), -1));
@@ -113,6 +117,7 @@ public class CartController {
 
     private void loadCartItems() {
         Cart cart = Cart.getInstance();
+        Map<String, Double> prices = cart.getPrices();
         Map<String, Integer> items = cart.getItems();
 
         // Create lists of labels and buttons for easier manipulation
@@ -131,6 +136,7 @@ public class CartController {
 
             String itemName = entry.getKey();
             int quantity = entry.getValue();
+            Double price = prices.get(itemName);
 
             itemLabels.get(index).setText(itemName);
             itemLabels.get(index).setStyle("-fx-text-fill: black;");
@@ -139,8 +145,9 @@ public class CartController {
             maxButtons.get(index).setVisible(true);
             minButtons.get(index).setVisible(true);
 
-            // Assuming each item has a fixed price of $10 for this example
-            totalPrice += quantity * 10;
+            if (price != null) {
+                totalPrice += quantity * price;
+            }
             index++;
         }
 
@@ -151,8 +158,16 @@ public class CartController {
             minButtons.get(i).setVisible(false);
         }
 
-        double totalWithTax = totalPrice * 1.22; // 22% tax
-        total_price.setText("₹" + String.format("%.2f", totalWithTax));
+        double gst = totalPrice * 0.18; // 18% GST
+        double tax = totalPrice * 0.04; // 4% additional tax
+        double totalWithTax = totalPrice + gst + tax; // total price including taxes
+
+        gst_label.setText("+ " + String.format("%.2f", gst));
+        tax_label.setText("+ " + String.format("%.2f", tax));
+        total_price.setText("₹ " + String.format("%.2f", totalWithTax));
+
+        gst_label.setStyle("-fx-text-fill: black;");
+        tax_label.setStyle("-fx-text-fill: black;");
         total_price.setStyle("-fx-text-fill: black;");
     }
 
@@ -168,7 +183,51 @@ public class CartController {
             newQuantity = 0;
         }
 
-        cart.addItem(itemName, newQuantity - currentQuantity, 10.0); // Assuming fixed price of $10 for this example
-        loadCartItems();
+        Double itemPrice = cart.getPrices().get(itemName);
+        if (itemPrice != null) {
+            cart.addItem(itemName, newQuantity - currentQuantity, itemPrice);
+            loadCartItems();
+        } else {
+            showAlert("Error", "Price for the item " + itemName + " is not available.");
+        }
     }
+
+    private void placeOrder(ActionEvent event) {
+        Cart cart = Cart.getInstance();
+        Map<String, Double> prices = cart.getPrices();
+        Map<String, Integer> items = cart.getItems();
+
+        StringBuilder orderDetails = new StringBuilder();
+        double totalPrice = 0;
+
+        for (Map.Entry<String, Integer> entry : items.entrySet()) {
+            String itemName = entry.getKey();
+            int quantity = entry.getValue();
+            Double price = prices.get(itemName);
+
+            if (price != null) {
+                orderDetails.append(itemName).append(" x ").append(quantity).append("\n");
+                totalPrice += quantity * price;
+            }
+        }
+
+        double gst = totalPrice * 0.18; // 18% GST
+        double tax = totalPrice * 0.04; // 4% additional tax
+        double totalWithTax = totalPrice + gst + tax; // total price including taxes
+
+        UserSession userSession = UserSession.getInstance();
+        String name = userSession.getUsername();
+        String address = userSession.getAddress();
+        String phone_no = userSession.getphone_no();
+        System.out.println(name+address+phone_no+orderDetails+totalWithTax);
+        if (name != null) {
+            DatabaseManager.addOrder(name, orderDetails.toString(), totalWithTax);
+            showAlert("Order Placed", "Your order has been placed successfully.");
+            cart.clearCart();
+            loadCartItems();
+        } else {
+            showAlert("Error", "User details are incomplete.");
+        }
+    }
+
 }

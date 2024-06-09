@@ -101,8 +101,76 @@ public class DatabaseManager {
         }
     }
 
+    public static void addFeedback(String name, String feedback, String email) {
+        String sql = "INSERT INTO feedback (name, feedback, email) VALUES (?, ?, ?)";
+        
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setString(1, name);
+            pstmt.setString(2, feedback);
+            pstmt.setString(3, email);
+            
+            pstmt.executeUpdate();
+            System.out.println("Feedback added successfully.");
+        } catch (SQLException e) {
+            System.out.println("Error adding feedback: " + e.getMessage());
+        }
+    }
+
+    public static UserSession getUserDetails(String username) {
+        String sql = "SELECT username, email, address, phone_no FROM users WHERE username = ?";
+        UserSession user = UserSession.getInstance();
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                String dbUsername = rs.getString("username");
+                String email = rs.getString("email");
+                String address = rs.getString("address");
+                String phone_no = rs.getString("phone_no");
+
+                user.setUsername(dbUsername);
+                user.setEmail(email);
+                user.setAddress(address);
+                user.setphone_no(phone_no);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving user details: " + e.getMessage());
+        }
+
+        return user;
+    }
+    public static void addOrder(String name, String orderDetails, double totalPrice) {
+        String sql = "INSERT INTO orders (name, order_details, total_price) VALUES (?, ?, ?)";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, name);
+            pstmt.setString(2, orderDetails);
+            pstmt.setDouble(3, totalPrice);
+            
+
+            pstmt.executeUpdate();
+            System.out.println("Order added successfully.");
+        } catch (SQLException e) {
+            System.out.println("Error adding order: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         boolean isConnected = testConnection();
         System.out.println("Connection test result: " + isConnected);
+        if (isConnected) {
+            UserSession user = getUserDetails("someUsername");  // replace with an actual username in your database
+            System.out.println("Username: " + user.getUsername());
+            System.out.println("Email: " + user.getEmail());
+            System.out.println("Address: " + user.getAddress());
+            System.out.println("Phone No: " + user.getphone_no());
+        }
     }
 }
