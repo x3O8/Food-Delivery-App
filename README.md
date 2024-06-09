@@ -11,7 +11,7 @@ Uses:
 5. phpmyadmin
 6. SQL 8.0
    
-All initial functionalities have been added (signup, login, profile edit, cart, support page) \n
+All initial functionalities have been added (signup, login, profile edit, cart, support page) <br>
 SQL tables contains user details, feedback and order details.
 Admin control page left.
 
