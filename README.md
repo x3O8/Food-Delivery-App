@@ -8,13 +8,18 @@ Uses:
 2. JDBC
 3. Scenebuilder
 4. JavaSE 21
+5. phpmyadmin
+6. SQL 8.0
    
-Signup page works! (all functionalities done)
-Profile page is all done! 
-Login page is 100% done :)
-Cart only 5% done :(
+All initial functionalities have been added (signup, login, profile edit, cart, support page) \n
+SQL tables contains user details, feedback and order details.
+Admin control page left.
 
-
+### Future Directions:
+1. Admin page
+2. min and max buttons on mainpage
+3. better order details table.
+4. delivery person page.
 ### DEADLINE: 10/6/24 
 
 TODO:
