@@ -21,7 +21,6 @@ Admin control page left.
 2. min and max buttons on mainpage
 3. better order details table.
 4. delivery person page.
-### DEADLINE: 10/6/24 
 
 TODO:
 1. ~~Setup login page~~
@@ -41,6 +40,8 @@ TODO:
 15. ~~Customer support UI~~
 16. ~~Add back button for CART~~
 17. Remove home button in mainmenu
+
+
     
     
 
